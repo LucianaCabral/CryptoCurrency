@@ -66,6 +66,8 @@ dependencies {
     implementation(libs.lifecycleViewmodel)
     implementation(libs.materialIcons)
     implementation(libs.flowlayout)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.ui.tooling.preview.android)
     implementation(libs.navigation)
     implementation(libs.constraintlayout)
     implementation(libs.hiltAndroid)
