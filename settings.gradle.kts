@@ -14,4 +14,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CoinPaprika"
-include(":app")
+include(
+    ":app",
+    ":core:data"
+)
