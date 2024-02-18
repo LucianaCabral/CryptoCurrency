@@ -21,11 +21,6 @@ output.json
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
-appInsightsSettings.xml
-compiler.xml
-gradle.xml
-migrations.xml
-vcs.xml
 
 # Keystore files
 *.jks
