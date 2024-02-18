@@ -58,36 +58,35 @@ android {
     hilt {
         enableAggregatingTask = true
     }
+}
 
-//    dependencies {
-//        // Libs
-//        implementation libs.lifecycleViewmodel
-//        implementation libs.materialIcons
-//        implementation libs.flowlayout
-//        implementation libs.navigation
-//        implementation libs.constraintlayout
-//        implementation libs.hiltAndroid
-//        implementation libs.hiltNavigation
-//        kapt libs.hiltCompiler
-//        kapt libs.androidxHiltCompiler
-//        kapt libs.hiltCompiler
-//
-//        // Test
-//        implementation libs.hiltAndroidTesting
-//        implementation libs.mockkAndroid
-//        implementation libs.truth
-//
-//        testImplementation libs.kotlinTest
-//        testImplementation libs.mockk
-//        testImplementation libs.truth
-//        testImplementation libs.turbine
-//        testImplementation libs.coreTesting
-//
-//        androidTestImplementation libs.hiltAndroidTesting
-//        androidTestImplementation libs.kotlinTest
-//        androidTestImplementation libs.mockkAndroid
-//        androidTestImplementation libs.truth
-//        androidTestImplementation libs.turbine
-//
-//    }
+dependencies {
+
+    // Libs
+    implementation(libs.lifecycleViewmodel)
+    implementation(libs.materialIcons)
+    implementation(libs.flowlayout)
+    implementation(libs.navigation)
+    implementation(libs.constraintlayout)
+    implementation(libs.hiltAndroid)
+    implementation(libs.hiltNavigation)
+    implementation(libs.hiltAndroid)
+    kapt(libs.hiltCompiler)
+    kapt(libs.androidxHiltCompiler)
+
+      // Test
+    implementation(libs.mockkAndroid)
+    implementation(libs.truth)
+
+    testImplementation(libs.kotlinTest)
+    testImplementation(libs.mockk)
+    testImplementation(libs.truth)
+    testImplementation(libs.turbine)
+    testImplementation(libs.coreTesting)
+
+    androidTestImplementation(libs.hiltAndroidTesting)
+    androidTestImplementation(libs.kotlinTest)
+    androidTestImplementation(libs.mockkAndroid)
+    androidTestImplementation(libs.truth)
+    androidTestImplementation(libs.turbine)
 }
