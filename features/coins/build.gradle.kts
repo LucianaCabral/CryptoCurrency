@@ -1,3 +1,4 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
@@ -6,9 +7,11 @@ plugins {
 apply("$rootDir/plugins/android-build.gradle")
 
 android {
-    namespace = "br.leeloo.coinpaprika.core.domain"
+    namespace = "br.leeloo.catpaprika.coins"
+
 }
 
 dependencies {
-
+    implementation(project(Modules.domain))
+    implementation(project(Modules.remote))
 }

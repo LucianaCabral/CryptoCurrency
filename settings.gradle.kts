@@ -15,7 +15,13 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoinPaprika"
 include(
+    // Core
     ":app",
     ":core:domain",
-    ":core:data:remote")
+    ":core:data:remote",
+
+// Features
+    ":features:coins"
+)
+
 

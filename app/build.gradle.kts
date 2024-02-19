@@ -15,6 +15,7 @@ android {
 
 
 dependencies {
-    implementation(project(Modules.remote))
+    implementation(project(Modules.coins))
     implementation(project(Modules.domain))
+    implementation(project(Modules.remote))
 }
