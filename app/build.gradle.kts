@@ -8,10 +8,12 @@ plugins {
 
 apply("$rootDir/plugins/android-build.gradle")
 
+
 android {
     namespace = "br.leeloo.coinpaprika"
 }
-dependencies {
 
+
+dependencies {
     implementation(project(Modules.remote))
 }

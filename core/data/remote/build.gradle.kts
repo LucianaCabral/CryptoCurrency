@@ -12,5 +12,10 @@ android {
 }
 
 dependencies {
+    // Libs
+    implementation(libs.gson)
+    implementation(libs.gsonConverter)
+    implementation(libs.loggingInterceptor)
+    implementation(libs.retrofit)
 
 }
