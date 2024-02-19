@@ -16,4 +16,5 @@ android {
 
 dependencies {
     implementation(project(Modules.remote))
+    implementation(project(Modules.domain))
 }
