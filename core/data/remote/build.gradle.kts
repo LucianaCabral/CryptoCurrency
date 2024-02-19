@@ -12,10 +12,12 @@ android {
 }
 
 dependencies {
+    // Modules
+    implementation(project(Modules.domain))
+
     // Libs
     implementation(libs.gson)
     implementation(libs.gsonConverter)
     implementation(libs.loggingInterceptor)
     implementation(libs.retrofit)
-
 }
