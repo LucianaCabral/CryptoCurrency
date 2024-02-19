@@ -12,4 +12,6 @@ android {
     namespace = "br.leeloo.coinpaprika"
 }
 dependencies {
+
+    implementation(project(Modules.remote))
 }
