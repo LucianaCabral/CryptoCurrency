@@ -1,5 +1,6 @@
 package br.leeloo.coinpaprika.core.data.remote.di
 
+import br.leeloo.coinpaprika.core.data.remote.BuildConfig
 import br.leeloo.coinpaprika.core.data.remote.network.HttpClient
 import br.leeloo.coinpaprika.core.data.remote.network.HttpClientImpl
 import dagger.Module
@@ -12,7 +13,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-internal const val BASE_URL = "https://api.coinpaprika.com/v1/"
+internal const val BASE_URL = "https://api.coinpaprika.com"
 @Module
 @InstallIn(SingletonComponent::class)
 internal object RemoteModule {
@@ -49,7 +50,7 @@ internal object RemoteModule {
             factory: GsonConverterFactory
         ): Retrofit {
             return Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(BuildConfig.BASE_URL)
                 .client(client)
                 .addConverterFactory(factory)
                 .build()

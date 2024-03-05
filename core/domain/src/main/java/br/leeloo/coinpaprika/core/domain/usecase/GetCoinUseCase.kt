@@ -8,5 +8,8 @@ import javax.inject.Inject
 class GetCoinUseCase @Inject constructor(
     private val repository: CoinRepository
 ) {
-    suspend fun invoke(): Flow<List<Coin>> = repository.getCoins()
+     operator fun invoke(): Flow<List<Coin>> = repository.getCoins().apply {
+        println("<L> usercase this = ${this}")
+        println("<L> usercase = ${repository.getCoins()}")
+    }
 }

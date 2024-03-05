@@ -4,7 +4,7 @@ import br.leeloo.coinpaprika.core.data.remote.model.CoinResponse
 import retrofit2.http.GET
 
 interface CoinService {
-    @GET("movie/popular")
-    suspend fun getCoins(
-    ): List<CoinResponse>
+    @GET("/v1/coins")
+    suspend fun getCoins()
+    : List<CoinResponse>
 }
