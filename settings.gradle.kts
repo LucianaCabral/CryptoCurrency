@@ -14,4 +14,14 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CoinPaprika"
-include(":app")
+include(
+    // Core
+    ":app",
+    ":core:domain",
+    ":core:data:remote",
+
+// Features
+    ":features:coins"
+)
+
+
