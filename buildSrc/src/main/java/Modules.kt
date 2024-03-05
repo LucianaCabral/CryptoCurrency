@@ -3,6 +3,6 @@ object Modules {
     const val domain = ":core:domain"
     const val remote = ":core:data:remote"
 
-    //Festures
+    //Features
     const val coins = ":features:coins"
 }

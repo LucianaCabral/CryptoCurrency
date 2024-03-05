@@ -14,4 +14,8 @@ android {
 dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.remote))
+    implementation(libs.androidx.paging.common.ktx)
+    implementation(libs.lifecycleRuntime)
+    debugImplementation(libs.androidx.ui.tooling)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
 }

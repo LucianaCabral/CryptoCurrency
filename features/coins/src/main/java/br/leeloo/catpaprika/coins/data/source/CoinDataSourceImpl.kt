@@ -5,12 +5,13 @@ import br.leeloo.coinpaprika.core.data.remote.service.CoinService
 import br.leeloo.coinpaprika.core.domain.model.Coin
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-internal class CoinDataSourceImpl(
+internal class CoinDataSourceImpl @Inject constructor(
     private val service: CoinService
-): CoinDataSource {
-    override suspend fun getCoins(): Flow<List<Coin>> {
-      return flow {
-          service.getCoins().toCoins() }
+) : CoinDataSource {
+    override fun getCoins(): Flow<List<Coin>> {
+        return flow {
+           emit(service.getCoins().toCoins()) }
     }
 }
