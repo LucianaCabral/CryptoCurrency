@@ -1,8 +1,8 @@
-package br.leeloo.catpaprika.coins.data.di
+package br.leeloo.coinpaprika.features.coins.data.di
 
-import br.leeloo.catpaprika.coins.data.repository.CoinRepositoryImpl
-import br.leeloo.catpaprika.coins.data.source.CoinDataSource
-import br.leeloo.catpaprika.coins.data.source.CoinDataSourceImpl
+import br.leeloo.coinpaprika.features.coins.data.repository.CoinRepositoryImpl
+import br.leeloo.coinpaprika.features.coins.data.source.CoinDataSource
+import br.leeloo.coinpaprika.features.coins.data.source.CoinDataSourceImpl
 import br.leeloo.coinpaprika.core.data.remote.network.HttpClient
 import br.leeloo.coinpaprika.core.data.remote.service.CoinService
 import br.leeloo.coinpaprika.core.domain.repository.CoinRepository

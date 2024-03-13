@@ -1,4 +1,4 @@
-package br.leeloo.catpaprika.coins.presentation.component
+package br.leeloo.coinpaprika.features.coins.presentation.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

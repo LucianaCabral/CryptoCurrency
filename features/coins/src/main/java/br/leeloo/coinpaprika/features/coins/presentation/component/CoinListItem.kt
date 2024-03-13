@@ -1,4 +1,4 @@
-package br.leeloo.catpaprika.coins.presentation.component
+package br.leeloo.coinpaprika.features.coins.presentation.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -31,7 +31,8 @@ fun CoinListItem(
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(
-            text = stringResource(R.string.coin_rank, coin.rank, coin.name
+            text = stringResource(
+                R.string.coin_rank, coin.rank, coin.name
             ),
             style = MaterialTheme.typography.titleMedium,
             overflow = TextOverflow.Ellipsis,

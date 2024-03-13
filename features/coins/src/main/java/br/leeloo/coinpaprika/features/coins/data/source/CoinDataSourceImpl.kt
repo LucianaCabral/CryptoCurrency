@@ -1,4 +1,4 @@
-package br.leeloo.catpaprika.coins.data.source
+package br.leeloo.coinpaprika.features.coins.data.source
 
 import br.leeloo.coinpaprika.core.data.remote.model.toCoins
 import br.leeloo.coinpaprika.core.data.remote.service.CoinService

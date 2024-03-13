@@ -1,11 +1,11 @@
-package br.leeloo.catpaprika.coins.navigation
+package br.leeloo.coinpaprika.features.coins.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import br.leeloo.catpaprika.coins.presentation.Screen
-import br.leeloo.catpaprika.coins.presentation.component.CoinListScreen
+import br.leeloo.coinpaprika.features.coins.presentation.Screen
+import br.leeloo.coinpaprika.features.coins.presentation.component.CoinListScreen
 
 @Composable
 fun NavigationGraph(

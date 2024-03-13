@@ -1,4 +1,4 @@
-package br.leeloo.catpaprika.coins.data.source
+package br.leeloo.coinpaprika.features.coins.data.source
 
 import br.leeloo.coinpaprika.core.domain.model.Coin
 import kotlinx.coroutines.flow.Flow
