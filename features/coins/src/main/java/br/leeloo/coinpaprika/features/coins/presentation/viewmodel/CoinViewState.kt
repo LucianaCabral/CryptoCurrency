@@ -1,4 +1,4 @@
-package br.leeloo.catpaprika.coins.presentation.viewmodel
+package br.leeloo.coinpaprika.features.coins.presentation.viewmodel
 
 import br.leeloo.coinpaprika.core.domain.model.Coin
 

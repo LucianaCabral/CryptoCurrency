@@ -1,12 +1,14 @@
-package br.leeloo.catpaprika.coins.data.di
+package br.leeloo.coinpaprika.features.coins.data.di
 
-import br.leeloo.catpaprika.coins.data.repository.CoinRepositoryImpl
-import br.leeloo.catpaprika.coins.data.source.CoinDataSource
-import br.leeloo.catpaprika.coins.data.source.CoinDataSourceImpl
+import br.leeloo.coinpaprika.features.coins.data.repository.CoinRepositoryImpl
+import br.leeloo.coinpaprika.features.coins.data.source.CoinDataSource
+import br.leeloo.coinpaprika.features.coins.data.source.CoinDataSourceImpl
 import br.leeloo.coinpaprika.core.data.remote.network.HttpClient
 import br.leeloo.coinpaprika.core.data.remote.service.CoinService
 import br.leeloo.coinpaprika.core.domain.repository.CoinRepository
 import br.leeloo.coinpaprika.core.domain.usecase.GetCoinUseCase
+import br.leeloo.coinpaprika.core.navigation.CoinNavigation
+import br.leeloo.coinpaprika.features.coins.navigation.CoinNavigationImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,4 +51,11 @@ internal object CoinModule {
 
     @Provides
     fun providesIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
+
+    @Provides
+    fun provideCoinNavigation(
+    ): CoinNavigation {
+        return CoinNavigationImpl()
+    }
 }
+

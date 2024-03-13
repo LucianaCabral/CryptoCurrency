@@ -7,14 +7,14 @@ plugins {
 apply("$rootDir/plugins/android-build.gradle")
 
 android {
-    namespace = "br.leeloo.catpaprika.coins"
+    namespace = "br.leeloo.coinpaprika.features.coins"
 
 }
 
 dependencies {
     implementation(project(Modules.domain))
+    implementation(project(Modules.navigation))
     implementation(project(Modules.remote))
-    implementation(libs.androidx.paging.common.ktx)
     implementation(libs.lifecycleRuntime)
     debugImplementation(libs.androidx.ui.tooling)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
