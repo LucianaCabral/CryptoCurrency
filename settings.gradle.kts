@@ -19,9 +19,9 @@ include(
     ":app",
     ":core:domain",
     ":core:data:remote",
+    ":core:navigation",
 
 // Features
     ":features:coins"
 )
-
 
