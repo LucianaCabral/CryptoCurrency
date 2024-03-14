@@ -23,8 +23,8 @@ dependencies {
     implementation(project(Modules.domain))
 
     // Libs
-    implementation(libs.gson)
-    implementation(libs.gsonConverter)
+    api(libs.gson)
+    api(libs.gsonConverter)
     implementation(libs.loggingInterceptor)
     implementation(libs.retrofit)
 }
