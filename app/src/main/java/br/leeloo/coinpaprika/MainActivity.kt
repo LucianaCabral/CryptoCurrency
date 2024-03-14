@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import br.leeloo.coinpaprika.core.navigation.CoinNavigation
+import br.leeloo.coinpaprika.core.navigation.DetailNavigation
 import br.leeloo.coinpaprika.ui.theme.CoinPaprikaTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -18,6 +19,9 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var coinNavigation: CoinNavigation
+
+    @Inject
+    lateinit var detailNavigation: DetailNavigation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +34,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     MainScreen(
                         navController = navController,
-                        coinNavigation = coinNavigation
+                        coinNavigation = coinNavigation,
+                        detailNavigation = detailNavigation
                     )
                 }
             }

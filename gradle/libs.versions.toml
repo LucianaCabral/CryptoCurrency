@@ -47,6 +47,7 @@ appcompat = "1.5.4"
 material = "1.9.0"
 paging-common-ktx = "3.2.1"
 ui-tooling = "1.6.2"
+androidx-ui-tooling = "1.6.3"
 
 [libraries]
 # Default
@@ -113,6 +114,7 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-paging-common-ktx = { group = "androidx.paging", name = "paging-common-ktx", version.ref = "paging-common-ktx" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "ui-tooling" }
+androidx-compose-ui-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "androidx-ui-tooling" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

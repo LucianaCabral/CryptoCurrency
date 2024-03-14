@@ -6,4 +6,5 @@ object Modules {
 
     //Features
     const val coins = ":features:coins"
+    const val details = ":features:details"
 }

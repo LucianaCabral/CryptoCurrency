@@ -25,3 +25,4 @@ include(
     ":features:coins"
 )
 
+include(":features:details")
