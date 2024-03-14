@@ -1,0 +1,94 @@
+//@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
+//plugins {
+//    alias(libs.plugins.androidApplication)
+//    alias(libs.plugins.kotlinAndroid)
+//    alias(libs.plugins.kotlinParcelize)
+//    alias(libs.plugins.)
+//}
+apply plugin: "com.google.dagger.hilt.android"
+apply plugin: "com.google.devtools.ksp"
+apply plugin: "kotlin-kapt"
+
+//apply from: "$rootDir/plugins/kotlin-module-build.gradle"
+
+android {
+    compileSdk = 34
+    defaultConfig {
+        minSdk = 24
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "$rootDir/app/proguard-rules.pro"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    "$rootDir/app/proguard-rules.pro",
+                    "$rootDir/app/proguard-rules-staging.pro"
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.3'
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs += ["-opt-in=kotlin.RequiresOptIn"]
+    }
+
+    hilt {
+        enableAggregatingTask = true
+    }
+}
+
+dependencies {
+
+    // Libs
+    implementation(libs.lifecycleViewmodel)
+    implementation(libs.materialIcons)
+    implementation(libs.flowlayout)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.ui.tooling.preview.android)
+    implementation(libs.navigation)
+    implementation(libs.constraintlayout)
+    implementation(libs.hiltAndroid)
+    implementation(libs.hiltNavigation)
+    implementation(libs.hiltAndroid)
+    kapt(libs.hiltCompiler)
+    kapt(libs.androidxHiltCompiler)
+
+      // Test
+    implementation(libs.mockkAndroid)
+    implementation(libs.truth)
+
+    testImplementation(libs.kotlinTest)
+    testImplementation(libs.mockk)
+    testImplementation(libs.truth)
+    testImplementation(libs.turbine)
+    testImplementation(libs.coreTesting)
+
+    androidTestImplementation(libs.hiltAndroidTesting)
+    androidTestImplementation(libs.kotlinTest)
+    androidTestImplementation(libs.mockkAndroid)
+    androidTestImplementation(libs.truth)
+    androidTestImplementation(libs.turbine)
+}

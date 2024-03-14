@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="coin">CryptoCurrency</string>
+    <string name="coin_title">Coin</string>
+    <string name="coin_active">active</string>
+    <string name="coin_inactive">inactive</string>
+    <string name="coin_rank">%1$s. %2$s</string>
+    <string name="coin_symbol">%1$s</string>
+    <string name="coin_new_value">%1$s</string>
+    <string name="coin_no_new">""</string>
+</resources>
