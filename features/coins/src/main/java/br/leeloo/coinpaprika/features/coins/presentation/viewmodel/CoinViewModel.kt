@@ -47,6 +47,7 @@ internal class CoinViewModel @Inject constructor(
 
     private fun onHandleSuccess(coins: List<Coin>) {
         _state.value = CoinViewState().handleSuccessState(coins)
+        println("<L> coins viewmodel = ${coins}")
     }
 
     fun onItemClicked(id: String) {

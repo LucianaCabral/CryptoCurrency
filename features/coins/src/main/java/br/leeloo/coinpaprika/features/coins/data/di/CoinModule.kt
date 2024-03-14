@@ -8,6 +8,7 @@ import br.leeloo.coinpaprika.core.data.remote.service.CoinService
 import br.leeloo.coinpaprika.core.domain.repository.CoinRepository
 import br.leeloo.coinpaprika.core.domain.usecase.GetCoinUseCase
 import br.leeloo.coinpaprika.core.navigation.CoinNavigation
+import br.leeloo.coinpaprika.core.navigation.DetailNavigation
 import br.leeloo.coinpaprika.features.coins.navigation.CoinNavigationImpl
 import dagger.Module
 import dagger.Provides
@@ -54,8 +55,9 @@ internal object CoinModule {
 
     @Provides
     fun provideCoinNavigation(
+        detailNavigation: DetailNavigation
     ): CoinNavigation {
-        return CoinNavigationImpl()
+        return CoinNavigationImpl(detailNavigation)
     }
 }
 
