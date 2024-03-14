@@ -1,5 +1,5 @@
-# CoinPaprika
-This project is a Poc based in Cat Api: https://api.coinpaprika.com/,
+# CoinPaprika Crypto Currency
+This project is a Poc based in CoinPaprika Api: https://api.coinpaprika.com/,
 was built with Android Studio Android Studio Hedgehog | 2023.1.1 Patch 2, with clean architecture in a multi-modules structure.
 The core module is the center and other modules branch off from it. The data module wraps remote.
 There's also a common and a domain and navigation module inside the core.
